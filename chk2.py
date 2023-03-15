@@ -166,11 +166,11 @@ def main_apv():
 
         
 
-    r1=requests.get("https://github.com/ahmad0176").text
+    r1=requests.get("https://raw.githubusercontent.com/ahmad0176/APPROVAL/main/approval.txt").text
 
     if key1 in r1:
 
-        "R(RIFAT_100RSCB76B3957EBRAND==)"
+        R()
 
     else:
 
