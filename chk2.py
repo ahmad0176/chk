@@ -170,7 +170,7 @@ def main_apv():
 
     if key1 in r1:
 
-        R(RIFAT_100RSCB76B3957EBRAND==)
+        "R(RIFAT_100RSCB76B3957EBRAND==)"
 
     else:
 
