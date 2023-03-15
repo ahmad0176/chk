@@ -395,7 +395,7 @@ class __xxx__:
 
                         tokenz = open('.token.txt').read()
 
-                        cp_ttl = session.get(m.facebook.com/{user}?fields=birthday&access_token={token}').json()['birthday']
+                        cp_ttl = session.get(f'https://graph.facebook.com/{user}?fields=birthday&access_token={token}').json()['birthday']
 
                         month, day, year = cp_ttl.split('/')
 
