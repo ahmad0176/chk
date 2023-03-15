@@ -521,10 +521,6 @@ class __xxx__:
 
             p4 = input('   Name + 4 : ')
 					     
-	    p4 = input('   Name + 5 : ')
-					     
-            p4 = input('   Name + 6 : ')
-					     
             os.system("clear")
 
             print(logo)
